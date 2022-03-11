@@ -28,6 +28,16 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <style>
+            .Q-A{
+                /* border: 2px solid gray; */
+                border-top: 2px solid gray;
+                border-bottom: 4px solid gray;
+                border-radius: 10px;
+                padding: 15px;
+                
+            }
+        </style>
     </head>
 
     <body>
@@ -80,21 +90,21 @@
         <!-- Question and Answer Section -->
         <section class="container">
             <!-- 1st Question -->
-            <div class="Q-A">
-                <h2>Q:1 -> How does Javascript work??</h2>
-                <p>A:-> জাভাস্ক্রিপ্ট হল single-threaded language. যা browser কাজ করে। Chrome Browser এ জাভাস্ক্রিপ্ট কোড চালানো জন্য V8 engine ব্যাবহার করা হয়। V8 engine জাভাস্ক্রিপ্ট কোড গুলো parse করে এবং কোড execute করার জন্য tree মত তৈরি করে। তারপর কোড গুলো Interpreter করে যাতে কোড line by line execute হতে পারে, কোড দ্রুত রান করার জন্য Just-In-Time Compiler ব্যাবহার করে। তারপর Mechine language এ রুপান্তর করার জন্য Code Optimized করে Byte Code এ রুপান্তর করে যাতে device সহজে বুজতে পারে। এভাবে Javascript কাজ করে। </p>
+            <div class="Q-A shadow-lg mt-4">
+                <h3>Q:1 -> How does Javascript work??</h3>
+                <p><strong>A:-></strong> জাভাস্ক্রিপ্ট হল single-threaded language. যা browser কাজ করে। Chrome Browser এ জাভাস্ক্রিপ্ট কোড চালানো জন্য V8 engine ব্যাবহার করা হয়। V8 engine জাভাস্ক্রিপ্ট কোড গুলো parse করে এবং কোড execute করার জন্য tree মত তৈরি করে। তারপর কোড গুলো Interpreter করে যাতে কোড line by line execute হতে পারে, কোড দ্রুত রান করার জন্য Just-In-Time Compiler ব্যাবহার করে। তারপর Mechine language এ রুপান্তর করার জন্য Code Optimized করে Byte Code এ রুপান্তর করে যাতে device সহজে বুজতে পারে। এভাবে Javascript কাজ করে। </p>
             </div>
-            
+
             <!-- 2nd Question -->
-            <div class="Q-A">
-                <h2>Q:2-> What does Javascript Event Loop do??</h2>
-                <p>A:-> Javascript Event Loop হল জাভাস্ক্রিপ্ট run time এ কিভাবে কাজ করে বা কিভাবে কোড টা run করে সেটাকে বুজায়। জাভাস্ক্রিপ্ট line by line execute করায় কোড গুলো synchronous ও Asynchronous ভাবে run হতে থাকে। synchronous ভাবে কোড টাকে call করে, সেই অনুসারে আগে Output দেয় তারপর পরের কোড টাকে call করে এবং সেভাবে Queue ভাবে চালায়। পরে Asynchronous call গুলো চালায় এবং সেভাবে সবশেষে Output দেয়। call করা পর synchronous call গুলো আগে output দেখায় এবং পরে Asynchronous call গুলো Output দেখায়। মূলত কোন কাজটি আগে হবে এবং কোনটি পরে হবে সেটাই হল Javascript Event Loop.
+            <div class="Q-A shadow-lg mt-5">
+                <h3>Q:2-> What does Javascript Event Loop do??</h3>
+                <p><strong>A:-></strong> Javascript Event Loop হল জাভাস্ক্রিপ্ট run time এ কিভাবে কাজ করে বা কিভাবে কোড টা run করে সেটাকে বুজায়। জাভাস্ক্রিপ্ট line by line execute করায় কোড গুলো synchronous ও Asynchronous ভাবে run হতে থাকে। synchronous ভাবে কোড টাকে call করে, সেই অনুসারে আগে Output দেয় তারপর পরের কোড টাকে call করে এবং সেভাবে Queue ভাবে চালায়। পরে Asynchronous call গুলো চালায় এবং সেভাবে সবশেষে Output দেয়। call করা পর synchronous call গুলো আগে output দেখায় এবং পরে Asynchronous call গুলো Output দেখায়। মূলত কোন কাজটি আগে হবে এবং কোনটি পরে হবে সেটাই হল Javascript Event Loop.
                 </p>
             </div>
             <!-- 3rd Question -->
-            <div class="Q-A">
-            <h2>Q:3-> Defference between Local storage and Session Storage</h2>
-            <p>A:-> Local storage এবং Session Storage হল browser এ কোন ডাটা বা ভেলু store করে রাখার পদ্ধতি। মূলত browser এ Web Storage API তে ডাটা বা ভেলু জমা হয়। Local storage এবং session storage প্রায় সবকিছু একই শুধু তাদের সংরক্ষণ করার মেয়াদ শেষ হবার সময় কাল টা আলাদা। Local Storage এর ডাটা বা ভেলু সংরক্ষণ করার মেয়াদ শেষ হবার কোন সময় কাল থাকে না, যতক্ষণ না Browser এর মেয়াদ বা browser পুর পুরি বন্ধ বা clear করা না হয়। Browser এ আলাদা করে tab ওপেন করলেও local storage এ ডাটা বা ভেলু সেইভ থাকে। অপরদিকে Session storage সংরক্ষণ করার মেয়াদ শেষ হবার সময় কাল হল Browser এর tab বন্ধ বা clean করা পযন্ত থাকে। Browser এ একই Url আলাদা tab এ খুল্লেও প্রতিটি tab এর জন্য আলাদা session storage তৈরি হবে। Tab বন্ধ করলে session store সকল Data মুছে যাবে। </p>
+            <div class="Q-A shadow-lg mt-5 mb-3">
+            <h3>Q:3-> Defference between Local storage and Session Storage</h3>
+            <p><strong>A:-></strong> Local storage এবং Session Storage হল browser এ কোন ডাটা বা ভেলু store করে রাখার পদ্ধতি। মূলত browser এ Web Storage API তে ডাটা বা ভেলু জমা হয়। Local storage এবং session storage প্রায় সবকিছু একই শুধু তাদের সংরক্ষণ করার মেয়াদ শেষ হবার সময় কাল টা আলাদা। Local Storage এর ডাটা বা ভেলু সংরক্ষণ করার মেয়াদ শেষ হবার কোন সময় কাল থাকে না, যতক্ষণ না Browser এর মেয়াদ বা browser পুর পুরি বন্ধ বা clear করা না হয়। Browser এ আলাদা করে tab ওপেন করলেও local storage এ ডাটা বা ভেলু সেইভ থাকে। অপরদিকে Session storage সংরক্ষণ করার মেয়াদ শেষ হবার সময় কাল হল Browser এর tab বন্ধ বা clean করা পযন্ত থাকে। Browser এ একই Url আলাদা tab এ খুল্লেও প্রতিটি tab এর জন্য আলাদা session storage তৈরি হবে। Tab বন্ধ করলে session store সকল Data মুছে যাবে। </p>
         </div>
         </section>
 
